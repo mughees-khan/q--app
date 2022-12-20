@@ -36,8 +36,13 @@ function Login() {
       });
   };
   return (
-    <div>
-      <button onClick={signin}>sigin with facebook</button>;
+    <div className="login">
+      <div className="login-box">
+        <h1>Welcome to Q App</h1>
+        <button className="login-btn" onClick={signin}>
+          sigin with facebook
+        </button>
+      </div>
     </div>
   );
 }

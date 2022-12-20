@@ -8,7 +8,7 @@ import {
   collection,
   onSnapshot,
 } from "firebase/firestore";
-
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -25,14 +25,33 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const storage = getStorage(app);
 function addUserToDb(name, email, uid) {
   return setDoc(doc(db, "users", uid), { email, name });
 }
-function postcompanyToDb(companyName, since, timing) {
+function postcompanyToDb(companyName, since, timing, address, imageUrl) {
   return addDoc(collection(db, "companys"), {
     companyName,
     timing,
     since,
+    address,
+    imageUrl,
   });
 }
-export { postcompanyToDb, addUserToDb };
+async function uploadImage(image) {
+  const storageRef = ref(storage, `image/${image.name}`);
+  const snapshot = await uploadBytes(storageRef, image);
+  const url = await getDownloadURL(snapshot.ref);
+  return url;
+}
+function getRealTime(callback) {
+  onSnapshot(collection(db, "companys"), (querySnapshot) => {
+    const ads = [];
+
+    querySnapshot.forEach((doc) => {
+      ads.push({ id: doc.id, ...doc.data() });
+    });
+    callback(ads);
+  });
+}
+export { getRealTime, postcompanyToDb, addUserToDb, uploadImage };

@@ -1,0 +1,16 @@
+.home {
+  height: 100px;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.home-btn {
+  width: 100px;
+  height: 40px;
+  background-color: rgb(1, 1, 68);
+  color: rgb(231, 240, 240);
+  border: 1px solid rgb(1, 1, 68);
+  border-radius: 10px;
+  cursor: pointer;
+}

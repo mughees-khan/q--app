@@ -3,15 +3,23 @@ import { useNavigate } from "react-router-dom";
 function Home() {
   const navigate = useNavigate();
   return (
-    <div>
+    <div className="home">
       <button
+        className="home-btn"
         onClick={() => {
-          navigate("/form");
+          navigate("/company");
         }}
       >
         Company
       </button>
-      <button>Token</button>
+      <button
+        onClick={() => {
+          navigate("/company");
+        }}
+        className="home-btn"
+      >
+        Token
+      </button>
     </div>
   );
 }

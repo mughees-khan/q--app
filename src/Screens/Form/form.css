@@ -1,0 +1,30 @@
+.form {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.form-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 400px;
+  background-color: rgb(46, 1, 1);
+}
+.form-field {
+  width: 250px;
+  height: 30px;
+  border-radius: 6px;
+  margin: 7px;
+}
+.add-btn {
+  width: 100px;
+  height: 40px;
+  background-color: rgb(46, 223, 46);
+  border: 1px solid rgb(46, 223, 46);
+  border-radius: 6px;
+  color: aliceblue;
+}

@@ -1,0 +1,66 @@
+.company-heading {
+  text-align: center;
+  color: rgb(23, 2, 58);
+}
+.company-ads {
+  margin: 20px;
+  padding: 30px;
+  background-color: #ffffffe8;
+
+  display: flex;
+  justify-content: space-around;
+}
+.img {
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+}
+.ad-down {
+  width: 700px;
+
+  display: flex;
+  justify-content: space-between;
+}
+.ad-img {
+  width: 340px;
+  height: 200px;
+}
+.token-btn {
+  width: 100px;
+  height: 40px;
+  background-color: rgb(0, 44, 44);
+  color: rgb(255, 230, 230);
+  border: 1px solid rgb(0, 44, 44);
+  border-radius: 10px;
+}
+.detail {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+}
+.detail-text {
+  background-color: rgb(186, 186, 255);
+  padding: 30px;
+}
+.text {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+}
+.token-no {
+  font-size: 100px;
+  color: rgb(0, 255, 0);
+}
+.detail-title {
+  color: rgb(46, 0, 0);
+}
+.detail-info {
+  color: rgb(0, 0, 104);
+}
+.main-home {
+  padding: 30px;
+  background-color: rgb(1, 1, 24);
+}
+.main-home > h1 {
+  color: rgb(1, 182, 182);
+}
