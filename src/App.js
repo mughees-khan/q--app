@@ -5,6 +5,7 @@ import Login from "./Screens/Login";
 import Form from "./Screens/Form";
 import Company from "./Screens/Company";
 import Detail from "./Screens/Company/detail";
+import Add from "./Screens/Company/add";
 function App() {
   return (
     <div>
@@ -15,6 +16,7 @@ function App() {
           <Route path="/form" element={<Form />} />
           <Route path="/company" element={<Company />} />
           <Route path="/detail" element={<Detail />} />
+          <Route path="/add" element={<Add />} />
         </Routes>
       </BrowserRouter>
     </div>

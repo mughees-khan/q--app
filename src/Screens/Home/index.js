@@ -7,7 +7,7 @@ function Home() {
       <button
         className="home-btn"
         onClick={() => {
-          navigate("/company");
+          navigate("/add");
         }}
       >
         Company

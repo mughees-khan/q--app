@@ -2,6 +2,10 @@
   text-align: center;
   color: rgb(23, 2, 58);
 }
+.imgs {
+  width: 250px;
+  height: 130px;
+}
 .company-ads {
   margin: 20px;
   padding: 30px;
@@ -48,7 +52,7 @@
   justify-content: space-between;
 }
 .token-no {
-  font-size: 100px;
+  font-size: 60px;
   color: rgb(0, 255, 0);
 }
 .detail-title {
@@ -63,4 +67,20 @@
 }
 .main-home > h1 {
   color: rgb(1, 182, 182);
+}
+.add {
+  background-color: rgb(26, 0, 0);
+  color: rgb(215, 236, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.token-main {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+.buy-token {
+  margin-top: 25px;
 }

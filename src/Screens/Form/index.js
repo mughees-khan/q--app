@@ -9,6 +9,7 @@ function Form() {
   const [timing, setTiming] = useState("");
   const [since, setSince] = useState("");
   const [address, setAddress] = useState("");
+  const [totalTokens, setTotalTokens] = useState("");
   const [image, setImage] = useState("");
   const upload = (e) => {
     if (e.target.value) {
@@ -18,7 +19,14 @@ function Form() {
   async function postCompany() {
     try {
       const imageUrl = await uploadImage(image);
-      await postcompanyToDb(company, timing, since, address, imageUrl);
+      await postcompanyToDb(
+        company,
+        timing,
+        since,
+        address,
+        imageUrl,
+        totalTokens
+      );
       alert("added");
       navigate("/company");
     } catch (e) {
@@ -45,6 +53,12 @@ function Form() {
           type="text"
           placeholder="timing"
           onChange={(e) => setSince(e.target.value)}
+        />
+        <input
+          className="form-field"
+          type="text"
+          placeholder="totalToken"
+          onChange={(e) => setTotalTokens(e.target.value)}
         />
         <input
           className="form-field"
